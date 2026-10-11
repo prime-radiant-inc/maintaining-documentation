@@ -1,0 +1,6 @@
+{
+  "name": "maintaining-documentation",
+  "description": "Keep a project's docs true to the code and useful to their readers, without rewriting historical records.",
+  "version": "0.1.0",
+  "contextFileName": "GEMINI.md"
+}

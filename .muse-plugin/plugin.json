@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "name": "maintaining-documentation",
+  "displayName": "maintaining-documentation",
+  "version": "0.1.0",
+  "description": "Keep a project's docs true to the code and useful to their readers, without rewriting historical records.",
+  "compat": {
+    "source": "native",
+    "manifestDir": ".muse-plugin"
+  },
+  "capabilities": {
+    "skills": [
+      {
+        "id": "maintaining-documentation",
+        "path": "skills/maintaining-documentation/SKILL.md"
+      }
+    ],
+    "commands": [],
+    "hooks": [],
+    "mcpServers": [],
+    "reminders": []
+  }
+}

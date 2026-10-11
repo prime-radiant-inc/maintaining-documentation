@@ -1,0 +1,12 @@
+{
+  "name": "maintaining-documentation",
+  "displayName": "maintaining-documentation",
+  "description": "Keep a project's docs true to the code and useful to their readers, without rewriting historical records.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Prime Radiant, Inc."
+  },
+  "repository": "https://github.com/prime-radiant-inc/maintaining-documentation",
+  "license": "MIT",
+  "skills": "./skills/"
+}

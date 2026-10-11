@@ -1,0 +1,21 @@
+{
+  "name": "maintaining-documentation",
+  "description": "maintaining-documentation plugin marketplace",
+  "plugins": [
+    {
+      "name": "maintaining-documentation",
+      "description": "Keep a project's docs true to the code and useful to their readers, without rewriting historical records.",
+      "version": "0.1.0",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/prime-radiant-inc/maintaining-documentation"
+      },
+      "author": {
+        "name": "Prime Radiant, Inc."
+      }
+    }
+  ],
+  "owner": {
+    "name": "Prime Radiant, Inc."
+  }
+}

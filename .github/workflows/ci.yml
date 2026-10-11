@@ -1,0 +1,30 @@
+name: CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  docmaint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 skills/maintaining-documentation/scripts/docmaint_test.py
+      - run: git diff --check
+  packaging:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generated files match everyharness.yaml
+        run: |
+          npx --yes everyharness@1.0.0 generate
+          git status --porcelain --untracked-files=all | tee /tmp/drift
+          test ! -s /tmp/drift
+      - run: npx --yes everyharness@1.0.0 validate
+      - run: npx --yes everyharness@1.0.0 bump --check
