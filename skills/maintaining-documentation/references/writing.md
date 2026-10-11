@@ -42,7 +42,7 @@ One doc serves one reader doing one kind of job. The type sets the shape.
 | Get a specific goal done, already oriented | How-to guide | Titled by the goal ("Add a second machine"), prerequisites, numbered steps, how to confirm it worked |
 | Fix something that's broken | Troubleshooting | Organized by **symptom as the reader sees it** (error text, observed behavior); for each: likely causes in order, a check that tells them apart, the fix |
 | Look up a fact | Reference | Organized like the **interface** they touch (commands, options, config keys, endpoints); complete, uniform entries; type, default, constraints, one example each |
-| Understand how it works, to change it or reason about it | Explanation / architecture | Concepts and the mental model, design tradeoffs and why, where the internals live. Internals belong here, for this reader |
+| Understand how it works, to change it or reason about it | Explanation / architecture | Concepts and the mental model; the invariants a change must not break (ordering, locking, ownership, retry and failure behavior), stated next to the code they constrain; design tradeoffs and why; where to start reading and how to test a change. Internals belong here, for this reader |
 | Upgrade across a change | Migration guide / release notes | What changes for *them*, ordered by impact; what they must do; how to tell it worked |
 | An agent working in the repo | `CLAUDE.md` / `AGENTS.md` | Commands to build/test/run, conventions to follow, traps that waste time. Not a code tour |
 
@@ -99,6 +99,10 @@ and report:
 Fix what it finds and run one more reader test with a fresh subagent. If a
 gap needs facts you don't have, it goes to the human as a question, not into
 the doc as a guess.
+
+If you try the doc's steps for real, do it in a temporary directory outside
+the repo, so the walk-through leaves nothing behind for the human to clean
+up.
 
 ## Quick checks before handing back
 
