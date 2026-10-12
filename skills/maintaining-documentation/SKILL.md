@@ -1,6 +1,6 @@
 ---
 name: maintaining-documentation
-description: Use when documentation needs creating, checking, or maintaining — docs may have drifted from code, pre-release doc verification, updating docs after finishing code work, adding or enforcing project terminology, deciding where a new doc should live, or a routine re-audit of previously verified docs.
+description: Use when documentation needs writing, checking, or maintaining — writing a README, tutorial, how-to, troubleshooting guide, reference, architecture doc, or onboarding doc; docs that read like a code tour; docs that may have drifted from code; pre-release doc verification; updating docs after finishing code work; adding or enforcing project terminology; deciding where a new doc should live; or a routine re-audit of previously verified docs.
 ---
 
 # Maintaining Documentation
@@ -24,6 +24,7 @@ exactly how design docs get their history erased.
 | Just finished code work; update the docs that ride along | `references/write-path.md` |
 | Create/extend the dictionary; term disputes; exceptions | `references/dictionary.md` |
 | Writing a brand-new doc; "where does this doc go?" | `references/new-docs.md` |
+| Writing or substantially rewriting a doc's content (any doc type) | `references/writing.md` |
 
 These are hard gates: do not start a flow from memory of this table. Flows
 add process; the law below binds all of them and is never restated in flow
@@ -230,6 +231,16 @@ including claims whose ground truth lives outside the repo, counts toward
   the reader (pragmatism law).
 - About to add a third per-project metadata file. → Two artifacts. Never a
   third.
+- Drafting a doc without a written reader brief, or with sections that map
+  one-to-one onto modules, packages, or algorithm steps. → Write the brief;
+  organize by the reader's questions (`references/writing.md`).
+- Putting `file:symbol` or source-path citations into a doc for users. →
+  Citations back your verification notes; the doc speaks the reader's
+  vocabulary.
+- Opening a README with how it works inside. → Open with what the reader
+  gets.
+- About to hand back a new or rewritten doc no one tried to *use*. → Run the
+  reader test (`references/writing.md`).
 - About to write an exception scope in prose ("code touching X"). → Path
   globs only.
 - Editing docs in a project with no confirmed index `Class` column. → Run
@@ -253,6 +264,10 @@ including claims whose ground truth lives outside the repo, counts toward
 | "Scan found zero hits, the exception is resolved." | A grep miss is not resolution — confirm via `git log -S` first; `[permanent]` exceptions are never removed on scan evidence. |
 | "It's a tiny doc edit, stamping without a verifier is fine." | The stamp *means* independently verified. No verifier, no stamp. |
 | "The docs feel incomplete, I'll add a doc for each gap." | Gaps are findings. A doc with no reader is debt, not coverage. |
+| "The code is the source of truth, so the doc should follow its structure." | The code is how you *check* the doc. The doc follows the reader's questions; only reference docs mirror anything, and they mirror the interface, not the implementation. |
+| "Citing the source file makes the doc verifiable." | Verifiable to you, noise to the reader. Keep citations in the verification notes. |
+| "Explaining the internals helps advanced users." | Then write them an architecture doc. A user doc that explains internals makes every reader wade through them. |
+| "Every claim checks out against the code, so the doc is good." | True and usable are separate tests. Run the reader test. |
 
 ## Common mistakes
 
@@ -271,3 +286,5 @@ including claims whose ground truth lives outside the repo, counts toward
   confirming the code does what the doc claims about it.
 - Treating `stale` output as proof of cleanliness — it is triage; soundness
   comes from full audits.
+- Writing from the code outward — narrating modules, functions, and
+  algorithm steps — instead of from the reader's situation inward.

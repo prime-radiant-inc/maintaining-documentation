@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "maintaining-documentation",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Keep a project's docs true to the code and useful to their readers, without rewriting historical records.",
   "author": {
     "name": "Prime Radiant, Inc."

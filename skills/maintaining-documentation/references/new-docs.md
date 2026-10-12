@@ -14,9 +14,11 @@ Law lives in the hub. First exit wins:
 3. **Evergreen birth checklist:**
    - Terms conform to `docs/DICTIONARY.md`; new recurring terms go through
      references/dictionary.md in the same change.
-   - Mechanical claims (paths, flags, routes, config) carry verifiable
-     citations — written against the code path that enacts them (verify the
-     verb — hub law).
+   - Write the content with `references/writing.md`: reader brief, doc
+     type, reader test.
+   - Mechanical claims (paths, flags, routes, config) are verified against
+     the code path that enacts them (verify the verb — hub law). Record the
+     citations in your verification notes, not in reader-facing prose.
    - Add the index row: one-liner for readers, Class `evergreen`, `Owns`
      globs for the surfaces whose facts it owns (machine-readable —
      `docmaint stale` will diff them).

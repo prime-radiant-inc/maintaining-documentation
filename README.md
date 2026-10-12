@@ -1,10 +1,13 @@
 # maintaining-documentation
 
-A coding-agent skill for keeping a project's documentation true and useful
-over time. It audits docs against the code, updates the docs that ride along
-with a code change, maintains a project terminology dictionary, and decides
-where new docs belong. It refuses to rewrite historical records like design
-specs and plans just because the code moved on.
+A coding-agent skill for writing documentation people can use, and keeping
+it true over time. It writes READMEs, tutorials, how-to guides,
+troubleshooting guides, reference, and architecture docs for the reader who
+will open them, instead of narrating the code. It audits docs against the
+code, updates the docs that ride along with a code change, maintains a
+project terminology dictionary, and decides where new docs belong. It refuses
+to rewrite historical records like design specs and plans just because the
+code moved on.
 
 ## Installation
 
@@ -38,6 +41,8 @@ See the [support matrix](docs/support-matrix.md) for what each harness supports.
 The skill triggers on its own when a task involves docs. You can also ask
 for it directly:
 
+> People keep asking why image paste fails over SSH. Write a troubleshooting doc.
+
 > Audit the docs in this repo against the code.
 
 > I just finished this branch. Update the docs that cover what I changed.
@@ -45,6 +50,20 @@ for it directly:
 > Where should a doc about the new retry policy live?
 
 > Set up a terminology dictionary for this project.
+
+When it writes a doc, the agent first pins down who the reader is, what
+brought them to the doc, and what they need to get done. It picks the doc
+type that fits that job, writes in the reader's vocabulary rather than the
+code's, and then hands the draft to a fresh agent playing that reader, with
+no access to the code, to find where they get stuck. Last, it copyedits the
+prose with Strunk's *The Elements of Style* and checks that the copyedit
+didn't change what any sentence claims.
+
+The plugin ships a second skill, `copyediting-docs`, which does that
+copyedit and drift check. It carries *The Elements of Style* (1918), cut down
+to what applies to technical docs. You can also use it on its own:
+
+> Copyedit docs/ARCHITECTURE.md.
 
 On first use in a project, the agent proposes which docs are **evergreen**
 (must match current reality: README, guides, reference) and which are
@@ -88,9 +107,15 @@ npx everyharness generate   # after editing everyharness.yaml or skills
 npx everyharness validate
 ```
 
+`evals/` holds the doc-writing scenarios used to test changes to the
+skill: real repos with one doc removed, and a blind judge that plays the
+doc's reader. See `evals/scenarios.md`.
+
 Generated harness files are committed. Edit `everyharness.yaml` and the
 skill, then regenerate; don't hand-edit generated files.
 
 ## License
 
-MIT
+MIT, except `skills/copyediting-docs/elements-of-style.md`:
+William Strunk Jr.'s *The Elements of Style* (1918), public domain, abridged from
+[Project Gutenberg #37134](https://www.gutenberg.org/ebooks/37134).

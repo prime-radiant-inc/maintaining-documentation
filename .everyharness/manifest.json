@@ -6,31 +6,31 @@
       "sha256": "0cd1173c6f80c36c5ea771c55eef8bc1552a7c753328252dc9f0a5b0af2aaffc"
     },
     ".claude-plugin/marketplace.json": {
-      "sha256": "479a09b5bb282a3988c5c27a018ea2f28b192527df97464a88d64cb1a261bcb5"
+      "sha256": "b25729a7557305a39252ac7a207b08f201125cfb971899eb1c603e958ef0b3a8"
     },
     ".claude-plugin/plugin.json": {
-      "sha256": "ad6362146dba0a405c4c3fb679e85235d0e2aeafce25fee9b55e7400ab640ed5"
+      "sha256": "a6d4c0c50841db24c9c0460587d083f5521d11f9e7e5dc80571c8b5741d82637"
     },
     ".codex-plugin/plugin.json": {
-      "sha256": "8978f1e8c9d871b2b323719b5af2dbc11d4711faa3df3cfb9ec1ea2fbe912165"
+      "sha256": "96d1ab5d2e42f0a1a916dd00f6172fda0c589d53d6193b1517e3d2bb9777c07d"
     },
     ".cursor-plugin/plugin.json": {
-      "sha256": "1e4f0498114bc8e9af3ce848fbe25f816f113a557896ae1507e85049ee7f7c9c"
+      "sha256": "fa043623fd0546ba701936fddd7addbac5213313d6b4931889b59eb85cc4c726"
     },
     ".devin-plugin/plugin.json": {
-      "sha256": "b0eb7c6d5c03361739019225f3058301eaf99b444644b79ad9ba28110380bf7a"
+      "sha256": "c9ad19b401693f609875a20e78761efa86cd37b439cc5480a387ce427574e30f"
     },
     ".hermes-plugin/__init__.py": {
       "sha256": "f8b21093a2b279d5d7e95541a385a1fbe2beb05a69509cdbc586bc5a790ea968"
     },
     ".hermes-plugin/plugin.yaml": {
-      "sha256": "22380e7a86763a41eb47e1e04efcc482eabe3b65ae21d6c19803d042de7a9be9"
+      "sha256": "879ebd7b310d10d69080626242a652e7417e753b0d649c4a1544a38da5705b70"
     },
     ".kimi-plugin/plugin.json": {
-      "sha256": "98089eb45b76e6094717b5be111e187cbd70072987f861483ec4af52b7e5e335"
+      "sha256": "70081712736b84994a5aedc873073c2463e625bb286c798ea6473e29d59592eb"
     },
     ".muse-plugin/plugin.json": {
-      "sha256": "371bfdde82fbf79da234e874944629850c93bdbf599b110b0c117335d9b4b9ff"
+      "sha256": "89a84245d92c490a04e64954ec34bff50fdf04623bfd1b1e34d3d23630634915"
     },
     ".opencode/plugins/maintaining-documentation.js": {
       "sha256": "24cef1d0dacdf40d7741ba0179bba32b586f216b8e5e655696ebbaf967955392"
@@ -81,13 +81,13 @@
       "sha256": "629e7554f61d377da30a7c2c90e11654b8ba3e97e40f309c70a08770bdabd23f"
     },
     "gemini-extension.json": {
-      "sha256": "08eac77eb8799a398c98c5c0149ed5af8c73bc0acc0402213d0b7e982c425340"
+      "sha256": "ed6e4e8b9b841f9e06510404c5aaae3125c6aa793c62e440fb419b3fd31e2a5c"
     },
     "package.json": {
-      "sha256": "a7eb253d7a03ea1f1d2a2e847d8fdfd6107b3248add9d2b99971f39dded73237"
+      "sha256": "dc248d08f8df8d4e24a4cbd3e18826ccc649c065133458136cb1c29c2456654d"
     },
     "plugin.json": {
-      "sha256": "a9ab470e6d4944388f570bcbf2eb19254cc0f9474985f8083a6e028566ee4c6e"
+      "sha256": "dd2612d21e0aa8ccff5e678f8cb3286a67a19a42a890c777c54e8e55166c26ca"
     }
   }
 }
