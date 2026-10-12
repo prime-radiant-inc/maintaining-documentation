@@ -59,9 +59,11 @@ no access to the code, to find where they get stuck. Last, it copyedits the
 prose with Strunk's *The Elements of Style* and checks that the copyedit
 didn't change what any sentence claims.
 
-The plugin ships a second skill, `writing-clearly-and-concisely`, which
-carries the full text of *The Elements of Style* (1918). It triggers on its
-own for any prose you ask the agent to write.
+The plugin ships a second skill, `copyediting-docs`, which does that
+copyedit and drift check. It carries *The Elements of Style* (1918), cut down
+to what applies to technical docs. You can also use it on its own:
+
+> Copyedit docs/ARCHITECTURE.md.
 
 On first use in a project, the agent proposes which docs are **evergreen**
 (must match current reality: README, guides, reference) and which are
@@ -114,6 +116,6 @@ skill, then regenerate; don't hand-edit generated files.
 
 ## License
 
-MIT, except `skills/writing-clearly-and-concisely/elements-of-style.md`:
-William Strunk Jr.'s *The Elements of Style* (1918), public domain, from
+MIT, except `skills/copyediting-docs/elements-of-style.md`:
+William Strunk Jr.'s *The Elements of Style* (1918), public domain, abridged from
 [Project Gutenberg #37134](https://www.gutenberg.org/ebooks/37134).

@@ -11,12 +11,12 @@
   "capabilities": {
     "skills": [
       {
-        "id": "maintaining-documentation",
-        "path": "skills/maintaining-documentation/SKILL.md"
+        "id": "copyediting-docs",
+        "path": "skills/copyediting-docs/SKILL.md"
       },
       {
-        "id": "writing-clearly-and-concisely",
-        "path": "skills/writing-clearly-and-concisely/SKILL.md"
+        "id": "maintaining-documentation",
+        "path": "skills/maintaining-documentation/SKILL.md"
       }
     ],
     "commands": [],

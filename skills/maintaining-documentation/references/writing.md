@@ -107,35 +107,11 @@ up.
 ## 5. Copyedit the prose, then check it for drift
 
 After the reader test's fixes are in, copyedit the doc with the
-`writing-clearly-and-concisely` skill, which ships next to this one
-(`<skill-dir>/../writing-clearly-and-concisely/elements-of-style.md`).
-Save a copy of the doc outside the repo first; you'll diff against it.
-Dispatch a fresh subagent:
-
-```
-Read elements-of-style.md in full, then copyedit <doc> in place by its
-rules. Keep every fact, command, path, code block, heading, and link; cut
-words, never information. Read no other file and add no content.
-```
-
-A copyedit makes a doc easier to act on, and it also changes claims. The
-rewrite to active voice names an actor the original left unnamed ("the
-stream is torn down" becomes "the gateway tears down the stream"), a
-qualifier drops ("locally", "usually"), "doesn't" hardens to "cannot", an
-option becomes an instruction. So dispatch a second fresh subagent with the
-word diff (`git diff --no-index --word-diff <original> <edited>`) and this
-job:
-
-```
-For each changed sentence, decide whether the edit means exactly what the
-original meant. List every one that drops or adds a fact, qualifier, or
-condition; changes scope; turns an option into an instruction or the
-reverse; or changes who or what does something. Don't flag pure rewording.
-```
-
-Each sentence it lists goes back through the hub's verification against the
-code. Keep the edit if the code bears it out; otherwise restore the original
-wording.
+`copyediting-docs` skill, which ships next to this one
+(`<skill-dir>/../copyediting-docs/SKILL.md`). It runs a Strunk copyedit in a
+subagent, then a drift check on the diff, because a copyedit that makes a
+doc easier to act on also changes some of its claims. Every sentence the
+drift check flags goes back through the hub's verification, or reverts.
 
 ## Quick checks before handing back
 

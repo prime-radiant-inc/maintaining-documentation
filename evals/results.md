@@ -73,3 +73,32 @@ the `writing-clearly-and-concisely` skill. All agents were Claude Opus 5.5.
 
 Caveat: the drift counts come from an agent's judgment, not from checking
 each claim against the code.
+
+## 2026-10-11: cutting down the style guide (`copyediting-docs`)
+
+The skill was renamed from `writing-clearly-and-concisely` to
+`copyediting-docs`, and its `elements-of-style.md` was cut by deleting text
+only, never rewording it. All arms copyedited the same eight docs as the
+previous section, and each was judged blind against the full-text copyedits
+from that section.
+
+| Arm | Words in guide | Prompt | Judges vs full text (full / arm / tie) | Drift |
+| --- | --- | --- | --- | --- |
+| Full text | 12,154 | rules named | (baseline) | 7 of ~210 sentences |
+| Heavy cut | 4,898 | bare "copyedit by its rules" | 5 / 0 / 3 | 11 of ~164 |
+| Moderate cut | 8,309 | bare | 7 / 1 / 0 | 10 of ~153 |
+| Moderate cut | 8,309 | rules named | 3 / 2 / 3 | 12 of ~258 |
+
+- The heavy and moderate cuts first ran with a shorter prompt than the
+  baseline, which confounded the comparison. With the same prompt, the
+  moderate cut reached parity with the full text. Most of the earlier gap
+  came from the prompt, not the guide's length.
+- The moderate cut keeps the composition rules (8–18) word for word and cuts
+  the punctuation rules (1–7) and the usage list. The skill ships it with the
+  rules-named prompt.
+- Judges again preferred drifted sentences at times (2 of the full text's
+  wins in the heavy-cut round, and 1 in the last round, cited a drifted
+  sentence), so the drift check stays.
+- Each drift count comes from one agent's judgment, and their strictness
+  varied from run to run. The differences in the drift column are within
+  that noise, except that the bare prompt ran higher.

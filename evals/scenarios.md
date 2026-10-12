@@ -85,18 +85,16 @@ REASONS: <2-3 sentences>
 
 ## Copyedit eval
 
-This tests step 5 of `references/writing.md` on its own, holding content
-fixed.
+This tests the `copyediting-docs` skill on its own, holding content fixed.
 
 1. Take docs the writing flow produced for the scenarios above. Copy each
    into `<case>/orig` and `<case>/edited`.
-2. Dispatch a fresh agent per case with step 5's copyedit prompt, pointed at
-   `<case>/edited` and at
-   `skills/writing-clearly-and-concisely/elements-of-style.md`.
+2. Dispatch a fresh agent per case with the skill's copyedit prompt, pointed
+   at `<case>/edited` and the arm's `elements-of-style.md`.
 3. Check that code blocks and headings are byte-identical between `orig` and
    `edited`.
 4. Judge each `orig`/`edited` pair blind with the judge prompt above, adding
    this sentence before "Your time matters.": "The two versions may differ
    only in wording. If so, judge which wording made your job easier."
-5. Run step 5's drift check on each pair's word diff and count the flagged
+5. Run the skill's drift check on each pair's word diff and count the flagged
    sentences.
