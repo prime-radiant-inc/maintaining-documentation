@@ -82,3 +82,21 @@ B_UNANSWERED: <one-line summary>
 PREFERENCE: <A|B|tie> (<strong|slight>)
 REASONS: <2-3 sentences>
 ```
+
+## Copyedit eval
+
+This tests step 5 of `references/writing.md` on its own, holding content
+fixed.
+
+1. Take docs the writing flow produced for the scenarios above. Copy each
+   into `<case>/orig` and `<case>/edited`.
+2. Dispatch a fresh agent per case with step 5's copyedit prompt, pointed at
+   `<case>/edited` and at
+   `skills/writing-clearly-and-concisely/elements-of-style.md`.
+3. Check that code blocks and headings are byte-identical between `orig` and
+   `edited`.
+4. Judge each `orig`/`edited` pair blind with the judge prompt above, adding
+   this sentence before "Your time matters.": "The two versions may differ
+   only in wording. If so, judge which wording made your job easier."
+5. Run step 5's drift check on each pair's word diff and count the flagged
+   sentences.

@@ -43,3 +43,33 @@ Caveats:
 - The first s4 runs used a fixture whose git history still held the removed
   doc, and one v0 run rebuilt from it. The rerun and `setup-fixtures.sh` use
   history-free fixtures.
+
+## 2026-10-11: Strunk copyedit pass (`references/writing.md` step 5)
+
+Inputs: the eight docs that won the comparisons above (s1, s2 and s3 from
+the writing-flow arm, and s4 from the rerun after the fix), copyedited with
+the `writing-clearly-and-concisely` skill. All agents were Claude Opus 5.5.
+
+- **Reader judges:** the copyedited version won 8 of 8 blind pairs, all
+  slight. Judges said the content was identical and the edits made it
+  quicker to act on: active voice that says which component acts, buried
+  warnings moved into their own paragraphs, parallel lists.
+- **Length:** 0–3% fewer words. Code blocks and headings were unchanged in
+  every case.
+- **Meaning drift:** the drift check flagged 7 of about 210 changed
+  sentences, in 4 of the 8 docs.
+  - Two named an actor the original left unnamed ("the stream is torn down"
+    became "the gateway tears down the stream").
+  - The rest dropped a qualifier ("locally"), hardened "doesn't" into
+    "cannot", turned an option into an instruction, or changed "does" into
+    "prints".
+  - One judge preferred a version partly *because of* a drifted sentence,
+    which reads more decisively. Reader judges can't catch drift, so step 5
+    keeps a separate drift check.
+- **Constraining the copyeditor instead:** a copyedit prompt that listed
+  these drift patterns as rules made 5–20× fewer edits on the four drifted
+  docs, which throws away most of the benefit. Step 5 lets the copyeditor
+  edit freely and catches drift afterwards.
+
+Caveat: the drift counts come from an agent's judgment, not from checking
+each claim against the code.
